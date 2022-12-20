@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <title>Admin Dashboard</title>
+    <link
+        rel="icon"
+        href="./icons/dashboardpage-dark.svg"
+        type="image/svg+xml"
+    />
 </head>
 <body>
     <div id="container">
@@ -15,54 +20,42 @@
                 <a href="#"><svg><image xlink:href="./icons/dashboard.svg"/></svg>
                 Dashboard</a>
             </div>
-            <div class="navgroup">
-                <div class="navItem">
-                    <a href="#"><svg><image xlink:href="./icons/home.svg"/></svg>
+            <div class="divider"></div>
+
+                <a href="#"><svg><image xlink:href="./icons/home.svg"/></svg>
                     Home</a>
-                </div>
-                <div class="navItem">
-                    <a href="#"><svg><image xlink:href="./icons/profile.svg"/></svg>
+                <a href="#"><svg><image xlink:href="./icons/profile.svg"/></svg>
                     Profile</a>
-                </div>
-                <div class="navItem">
-                    <a href="#"><svg><image xlink:href="./icons/messages.svg"/></svg>
+                <a href="#"><svg><image xlink:href="./icons/messages.svg"/></svg>
                     Messages</a>
-                </div>
-                <div class="navItem">
-                    <a href="#"><svg><image xlink:href="./icons/history.svg"/></svg>
+                <a href="#"><svg><image xlink:href="./icons/history.svg"/></svg>
                     History</a>
-                </div>
-                <div class="navItem">
-                    <a href="#"><svg><image xlink:href="./icons/tasks.svg"/></svg>
+                <a href="#"><svg><image xlink:href="./icons/tasks.svg"/></svg>
                     Tasks</a>
-                </div>
-                <div class="navItem">
-                    <a href="#"><svg><image xlink:href="./icons/communities.svg"/></svg>
+                <a href="#"><svg><image xlink:href="./icons/communities.svg"/></svg>
                     Communities</a>
-                </div>
-            </div>
-            <div class="navgroup">
-                <div class="navItem">
-                    <a href="#"><svg><image xlink:href="./icons/settings.svg"/></svg>
-                    Settings</a>
-                </div>
-                <div class="navItem">
-                    <a href="#"><svg><image xlink:href="./icons/support.svg"/></svg>
+
+            <div class="divider"></div>
+
+                <a href="#"><svg><image xlink:href="./icons/settings.svg"/></svg>Settings</a>
+                <a href="#"><svg><image xlink:href="./icons/support.svg"/></svg>
                     Support</a>
-                </div>
-                <div class="navItem">
-                    <a href="#"><svg><image xlink:href="./icons/privacy.svg"/></svg>
-                    Privacy</a>
-                </div>
-            </div>
+                <a href="#"><svg><image xlink:href="./icons/privacy.svg" onclick="resize()"/></svg>Privacy</a>
         </div>
         <div id="header">
             <div id="top">
-                <div>
-                    <svg><image xlink:href="./icons/search.svg"/></svg>
-                    <input type="search">
+                <div id="hamburger">
+                    <a class="nav-toggle">
+                        <span class="bar x"></span>
+                        <span class="bar x"></span>
+                        <span class="bar x"></span>
+                      </a>
                 </div>
-                <div>
+                <div id ="search">
+                    <label for="searchbox"><svg><image xlink:href="./icons/search.svg"/></svg></label>
+                    <input type="search" name="searchbox" id="searchbox">
+                </div>
+                <div id="top_nav_options">
                     <svg><image xlink:href="./icons/notify.svg"/></svg>
                     <img src="profilepicture.png">
                     Morgan Oakley
@@ -72,238 +65,260 @@
                 <div id="userInfo">
                     <img src="profilepicture.png">
                     <div id="hiThere">
-                        <p>Hi there,</p><h1>Morgan Oakley (@morgan)</h1>    
+                        <p>Hi there,</p><h1>Morgan Oakley(@morgan)</h1>
                     </div>
                 </div>
                 <div id="buttons">
-                    <div class="buttonBlue">New</div>
-                    <div class="buttonBlue">Upload</div>
-                    <div class="buttonBlue">Share</div>
+                    <div class="button">New</div>
+                    <div class="button">Upload</div>
+                    <div class="button">Share</div>
                 </div>
             </div>
         </div>
         <div id="main-content">
-            <div id="projectsContainer">
+            <div class="projects_title_section">
                 <h3>Your Projects</h3>
-                <div id="projects">
-                    <div class= "projectCard">
-                        <div class="projectCardText">
-                            <h1>Super Cool Project</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum neque vitae arcu euismod, non tempor ex egestas. Morbi justo neque, fermentum sit amet dui at, pharetra scelerisque nisl.</p>
-                        </div>
-                        <div class="projectCardIcons">
-                            <svg>
-                                <image xlink:href="./icons/fav.svg" onClick="fav()"/>
-                            </svg>
-                            <svg>
-                                <image xlink:href="./icons/eyeplus.svg" onclick="eyeplus()"/>
-                            </svg>
-                            <svg>
-                                <image xlink:href="./icons/fork.svg" onclick="fork.svg"/>
-                            </svg>
-                        </div>
+            </div>
+            <div id="projects">
+                <div class= "projectCard">
+                    <div class="projectCardText">
+                        <h3>Super Cool Project</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum neque vitae arcu euismod, non tempor ex egestas. Morbi justo neque, fermentum sit amet dui at, pharetra scelerisque nisl.</p>
                     </div>
-                    <div class= "projectCard">
-                        <div class="projectCardText">
-                            <h1>Super Cool Project</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum neque vitae arcu euismod, non tempor ex egestas. Morbi justo neque, fermentum sit amet dui at, pharetra scelerisque nisl.</p>
-                        </div>
-                        <div class="projectCardIcons">
-                            <svg>
-                                <image xlink:href="./icons/fav.svg" onClick="fav()"/>
-                            </svg>
-                            <svg>
-                                <image xlink:href="./icons/eyeplus.svg" onclick="eyeplus()"/>
-                            </svg>
-                            <svg>
-                                <image xlink:href="./icons/fork.svg" onclick="fork.svg"/>
-                            </svg>
-                        </div>
+                    <div class="projectCardIcons">
+                        <svg>
+                            <image xlink:href="./icons/fav.svg" onClick="fav()"/>
+                        </svg>
+                        <svg>
+                            <image xlink:href="./icons/eyeplus.svg" onclick="eyeplus()"/>
+                        </svg>
+                        <svg>
+                            <image xlink:href="./icons/fork.svg" onclick="fork.svg"/>
+                        </svg>
                     </div>
-                    <div class= "projectCard">
-                        <div class="projectCardText">
-                            <h1>Super Cool Project</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum neque vitae arcu euismod, non tempor ex egestas. Morbi justo neque, fermentum sit amet dui at, pharetra scelerisque nisl.</p>
-                        </div>
-                        <div class="projectCardIcons">
-                            <svg>
-                                <image xlink:href="./icons/fav.svg" onClick="fav()"/>
-                            </svg>
-                            <svg>
-                                <image xlink:href="./icons/eyeplus.svg" onclick="eyeplus()"/>
-                            </svg>
-                            <svg>
-                                <image xlink:href="./icons/fork.svg" onclick="fork.svg"/>
-                            </svg>
-                        </div>
+                </div>
+                <div class= "projectCard">
+                    <div class="projectCardText">
+                        <h1>Super Cool Project</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum neque vitae arcu euismod, non tempor ex egestas. Morbi justo neque, fermentum sit amet dui at, pharetra scelerisque nisl.</p>
                     </div>
-                    <div class= "projectCard">
-                        <div class="projectCardText">
-                            <h1>Super Cool Project</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum neque vitae arcu euismod, non tempor ex egestas. Morbi justo neque, fermentum sit amet dui at, pharetra scelerisque nisl.</p>
-                        </div>
-                        <div class="projectCardIcons">
-                            <svg>
-                                <image xlink:href="./icons/fav.svg" onClick="fav()"/>
-                            </svg>
-                            <svg>
-                                <image xlink:href="./icons/eyeplus.svg" onclick="eyeplus()"/>
-                            </svg>
-                            <svg>
-                                <image xlink:href="./icons/fork.svg" onclick="fork.svg"/>
-                            </svg>
-                        </div>
+                    <div class="projectCardIcons">
+                        <svg>
+                            <image xlink:href="./icons/fav.svg" onClick="fav()"/>
+                        </svg>
+                        <svg>
+                            <image xlink:href="./icons/eyeplus.svg" onclick="eyeplus()"/>
+                        </svg>
+                        <svg>
+                            <image xlink:href="./icons/fork.svg" onclick="fork.svg"/>
+                        </svg>
                     </div>
-                    <div class= "projectCard">
-                        <div class="projectCardText">
-                            <h1>Super Cool Project</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum neque vitae arcu euismod, non tempor ex egestas. Morbi justo neque, fermentum sit amet dui at, pharetra scelerisque nisl.</p>
-                        </div>
-                        <div class="projectCardIcons">
-                            <svg>
-                                <image xlink:href="./icons/fav.svg" onClick="fav()"/>
-                            </svg>
-                            <svg>
-                                <image xlink:href="./icons/eyeplus.svg" onclick="eyeplus()"/>
-                            </svg>
-                            <svg>
-                                <image xlink:href="./icons/fork.svg" onclick="fork.svg"/>
-                            </svg>
-                        </div>
+                </div>
+                <div class= "projectCard">
+                    <div class="projectCardText">
+                        <h1>Super Cool Project</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum neque vitae arcu euismod, non tempor ex egestas. Morbi justo neque, fermentum sit amet dui at, pharetra scelerisque nisl.</p>
                     </div>
-                    <div class= "projectCard">
-                        <div class="projectCardText">
-                            <h1>Super Cool Project</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum neque vitae arcu euismod, non tempor ex egestas. Morbi justo neque, fermentum sit amet dui at, pharetra scelerisque nisl.</p>
-                        </div>
-                        <div class="projectCardIcons">
-                            <svg>
-                                <image xlink:href="./icons/fav.svg" onClick="fav()"/>
-                            </svg>
-                            <svg>
-                                <image xlink:href="./icons/eyeplus.svg" onclick="eyeplus()"/>
-                            </svg>
-                            <svg>
-                                <image xlink:href="./icons/fork.svg" onclick="fork.svg"/>
-                            </svg>
-                        </div>
+                    <div class="projectCardIcons">
+                        <svg>
+                            <image xlink:href="./icons/fav.svg" onClick="fav()"/>
+                        </svg>
+                        <svg>
+                            <image xlink:href="./icons/eyeplus.svg" onclick="eyeplus()"/>
+                        </svg>
+                        <svg>
+                            <image xlink:href="./icons/fork.svg" onclick="fork.svg"/>
+                        </svg>
                     </div>
-                    <div class= "projectCard">
-                        <div class="projectCardText">
-                            <h1>Super Cool Project</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum neque vitae arcu euismod, non tempor ex egestas. Morbi justo neque, fermentum sit amet dui at, pharetra scelerisque nisl.</p>
-                        </div>
-                        <div class="projectCardIcons">
-                            <svg>
-                                <image xlink:href="./icons/fav.svg" onClick="fav()"/>
-                            </svg>
-                            <svg>
-                                <image xlink:href="./icons/eyeplus.svg" onclick="eyeplus()"/>
-                            </svg>
-                            <svg>
-                                <image xlink:href="./icons/fork.svg" onclick="fork.svg"/>
-                            </svg>
-                        </div>
+                </div>
+                <div class= "projectCard">
+                    <div class="projectCardText">
+                        <h1>Super Cool Project</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum neque vitae arcu euismod, non tempor ex egestas. Morbi justo neque, fermentum sit amet dui at, pharetra scelerisque nisl.</p>
                     </div>
-                    <div class= "projectCard">
-                        <div class="projectCardText">
-                            <h1>Super Cool Project</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum neque vitae arcu euismod, non tempor ex egestas. Morbi justo neque, fermentum sit amet dui at, pharetra scelerisque nisl.</p>
-                        </div>
-                        <div class="projectCardIcons">
-                            <svg>
-                                <image xlink:href="./icons/fav.svg" onClick="fav()"/>
-                            </svg>
-                            <svg>
-                                <image xlink:href="./icons/eyeplus.svg" onclick="eyeplus()"/>
-                            </svg>
-                            <svg>
-                                <image xlink:href="./icons/fork.svg" onclick="fork.svg"/>
-                            </svg>
-                        </div>
+                    <div class="projectCardIcons">
+                        <svg>
+                            <image xlink:href="./icons/fav.svg" onClick="fav()"/>
+                        </svg>
+                        <svg>
+                            <image xlink:href="./icons/eyeplus.svg" onclick="eyeplus()"/>
+                        </svg>
+                        <svg>
+                            <image xlink:href="./icons/fork.svg" onclick="fork.svg"/>
+                        </svg>
                     </div>
-                    <div class= "projectCard">
-                        <div class="projectCardText">
-                            <h1>Super Cool Project</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum neque vitae arcu euismod, non tempor ex egestas. Morbi justo neque, fermentum sit amet dui at, pharetra scelerisque nisl.</p>
-                        </div>
-                        <div class="projectCardIcons">
-                            <svg>
-                                <image xlink:href="./icons/fav.svg" onClick="fav()"/>
-                            </svg>
-                            <svg>
-                                <image xlink:href="./icons/eyeplus.svg" onclick="eyeplus()"/>
-                            </svg>
-                            <svg>
-                                <image xlink:href="./icons/fork.svg" onclick="fork.svg"/>
-                            </svg>
-                        </div>
+                </div>
+                <div class= "projectCard">
+                    <div class="projectCardText">
+                        <h1>Super Cool Project</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum neque vitae arcu euismod, non tempor ex egestas. Morbi justo neque, fermentum sit amet dui at, pharetra scelerisque nisl.</p>
                     </div>
-                    <div class= "projectCard">
-                        <div class="projectCardText">
-                            <h1>Super Cool Project</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum neque vitae arcu euismod, non tempor ex egestas. Morbi justo neque, fermentum sit amet dui at, pharetra scelerisque nisl.</p>
-                        </div>
-                        <div class="projectCardIcons">
-                            <svg>
-                                <image xlink:href="./icons/fav.svg" onClick="fav()"/>
-                            </svg>
-                            <svg>
-                                <image xlink:href="./icons/eyeplus.svg" onclick="eyeplus()"/>
-                            </svg>
-                            <svg>
-                                <image xlink:href="./icons/fork.svg" onclick="fork.svg"/>
-                            </svg>
-                        </div>
+                    <div class="projectCardIcons">
+                        <svg>
+                            <image xlink:href="./icons/fav.svg" onClick="fav()"/>
+                        </svg>
+                        <svg>
+                            <image xlink:href="./icons/eyeplus.svg" onclick="eyeplus()"/>
+                        </svg>
+                        <svg>
+                            <image xlink:href="./icons/fork.svg" onclick="fork.svg"/>
+                        </svg>
                     </div>
-                    <div class= "projectCard">
-                        <div class="projectCardText">
-                            <h1>Super Cool Project</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum neque vitae arcu euismod, non tempor ex egestas. Morbi justo neque, fermentum sit amet dui at, pharetra scelerisque nisl.</p>
-                        </div>
-                        <div class="projectCardIcons">
-                            <svg>
-                                <image xlink:href="./icons/fav.svg" onClick="fav()"/>
-                            </svg>
-                            <svg>
-                                <image xlink:href="./icons/eyeplus.svg" onclick="eyeplus()"/>
-                            </svg>
-                            <svg>
-                                <image xlink:href="./icons/fork.svg" onclick="fork.svg"/>
-                            </svg>
-                        </div>
+                </div>
+                <div class= "projectCard">
+                    <div class="projectCardText">
+                        <h1>Super Cool Project</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum neque vitae arcu euismod, non tempor ex egestas. Morbi justo neque, fermentum sit amet dui at, pharetra scelerisque nisl.</p>
                     </div>
-                    <div class= "projectCard">
-                        <div class="projectCardText">
-                            <h1>Super Cool Project</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum neque vitae arcu euismod, non tempor ex egestas. Morbi justo neque, fermentum sit amet dui at, pharetra scelerisque nisl.</p>
-                        </div>
-                        <div class="projectCardIcons">
-                            <svg>
-                                <image xlink:href="./icons/fav.svg" onClick="fav()"/>
-                            </svg>
-                            <svg>
-                                <image xlink:href="./icons/eyeplus.svg" onclick="eyeplus()"/>
-                            </svg>
-                            <svg>
-                                <image xlink:href="./icons/fork.svg" onclick="fork.svg"/>
-                            </svg>
-                        </div>
+                    <div class="projectCardIcons">
+                        <svg>
+                            <image xlink:href="./icons/fav.svg" onClick="fav()"/>
+                        </svg>
+                        <svg>
+                            <image xlink:href="./icons/eyeplus.svg" onclick="eyeplus()"/>
+                        </svg>
+                        <svg>
+                            <image xlink:href="./icons/fork.svg" onclick="fork.svg"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class= "projectCard">
+                    <div class="projectCardText">
+                        <h1>Super Cool Project</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum neque vitae arcu euismod, non tempor ex egestas. Morbi justo neque, fermentum sit amet dui at, pharetra scelerisque nisl.</p>
+                    </div>
+                    <div class="projectCardIcons">
+                        <svg>
+                            <image xlink:href="./icons/fav.svg" onClick="fav()"/>
+                        </svg>
+                        <svg>
+                            <image xlink:href="./icons/eyeplus.svg" onclick="eyeplus()"/>
+                        </svg>
+                        <svg>
+                            <image xlink:href="./icons/fork.svg" onclick="fork.svg"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class= "projectCard">
+                    <div class="projectCardText">
+                        <h1>Super Cool Project</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum neque vitae arcu euismod, non tempor ex egestas. Morbi justo neque, fermentum sit amet dui at, pharetra scelerisque nisl.</p>
+                    </div>
+                    <div class="projectCardIcons">
+                        <svg>
+                            <image xlink:href="./icons/fav.svg" onClick="fav()"/>
+                        </svg>
+                        <svg>
+                            <image xlink:href="./icons/eyeplus.svg" onclick="eyeplus()"/>
+                        </svg>
+                        <svg>
+                            <image xlink:href="./icons/fork.svg" onclick="fork.svg"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class= "projectCard">
+                    <div class="projectCardText">
+                        <h1>Super Cool Project</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum neque vitae arcu euismod, non tempor ex egestas. Morbi justo neque, fermentum sit amet dui at, pharetra scelerisque nisl.</p>
+                    </div>
+                    <div class="projectCardIcons">
+                        <svg>
+                            <image xlink:href="./icons/fav.svg" onClick="fav()"/>
+                        </svg>
+                        <svg>
+                            <image xlink:href="./icons/eyeplus.svg" onclick="eyeplus()"/>
+                        </svg>
+                        <svg>
+                            <image xlink:href="./icons/fork.svg" onclick="fork.svg"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class= "projectCard">
+                    <div class="projectCardText">
+                        <h1>Super Cool Project</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum neque vitae arcu euismod, non tempor ex egestas. Morbi justo neque, fermentum sit amet dui at, pharetra scelerisque nisl.</p>
+                    </div>
+                    <div class="projectCardIcons">
+                        <svg>
+                            <image xlink:href="./icons/fav.svg" onClick="fav()"/>
+                        </svg>
+                        <svg>
+                            <image xlink:href="./icons/eyeplus.svg" onclick="eyeplus()"/>
+                        </svg>
+                        <svg>
+                            <image xlink:href="./icons/fork.svg" onclick="fork.svg"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class= "projectCard">
+                    <div class="projectCardText">
+                        <h1>Super Cool Project</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum neque vitae arcu euismod, non tempor ex egestas. Morbi justo neque, fermentum sit amet dui at, pharetra scelerisque nisl.</p>
+                    </div>
+                    <div class="projectCardIcons">
+                        <svg>
+                            <image xlink:href="./icons/fav.svg" onClick="fav()"/>
+                        </svg>
+                        <svg>
+                            <image xlink:href="./icons/eyeplus.svg" onclick="eyeplus()"/>
+                        </svg>
+                        <svg>
+                            <image xlink:href="./icons/fork.svg" onclick="fork.svg"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class= "projectCard">
+                    <div class="projectCardText">
+                        <h1>Super Cool Project</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum neque vitae arcu euismod, non tempor ex egestas. Morbi justo neque, fermentum sit amet dui at, pharetra scelerisque nisl.</p>
+                    </div>
+                    <div class="projectCardIcons">
+                        <svg>
+                            <image xlink:href="./icons/fav.svg" onClick="fav()"/>
+                        </svg>
+                        <svg>
+                            <image xlink:href="./icons/eyeplus.svg" onclick="eyeplus()"/>
+                        </svg>
+                        <svg>
+                            <image xlink:href="./icons/fork.svg" onclick="fork.svg"/>
+                        </svg>
                     </div>
                 </div>
             </div>
-            <div id="rightMainContent">
+            <div class="news_title_section">
                 <h3>Announcments</h3>
-                <div class= "announcementItem"></div>
-                <div class= "announcementItem"></div>
-                <div class= "announcementItem"></div>
-
-                <h3>Trending</h3>
-                <div class= "trendingItem"></div>
-                <div class= "trendingItem"></div>
-                <div class= "trendingItem"></div>
-                <div class= "trendingItem"></div>
             </div>
+            <div id="rightMainContent">
+                <div class="news_section">
+                    <div class= "rightMainContentItem">
+                        Mauris quis tempor metus. Sed consectetur, neque eu consectetur interdum, nisl nibh rhoncus tortor, a tempus ipsum massa sed odio. Quisque vel libero id est consequat feugiat vitae et nisl.
+
+                    </div>
+                    <div class= "rightMainContentItem">
+                        Mauris quis tempor metus. Sed consectetur, neque eu consectetur interdum, nisl nibh rhoncus tortor, a tempus ipsum massa sed odio. Quisque vel libero id est consequat feugiat vitae et nisl.
+                    </div>
+                    <div class= "rightMainContentItem">
+                        Mauris quis tempor metus. Sed consectetur, neque eu consectetur interdum, nisl nibh rhoncus tortor, a tempus ipsum massa sed odio. Quisque vel libero id est consequat feugiat vitae et nisl.
+                    </div>
+                </div>
+                <div class="news_title_section">
+                    <h3>Trending</h3>
+                </div>
+                <div class="news_section">
+                        <div class= "rightMainContentItem">
+                            Mauris quis tempor metus. Sed consectetur, neque eu consectetur interdum, nisl nibh rhoncus tortor, a tempus ipsum massa sed odio. Quisque vel libero id est consequat feugiat vitae et nisl.
+                        </div>
+                        <div class="rightMainContentItem">
+                            Mauris quis tempor metus. Sed consectetur, neque eu consectetur interdum, nisl nibh rhoncus tortor, a tempus ipsum massa sed odio. Quisque vel libero id est consequat feugiat vitae et nisl.
+                        </div>
+                        <div class= "rightMainContentItem">
+                            Mauris quis tempor metus. Sed consectetur, neque eu consectetur interdum, nisl nibh rhoncus tortor, a tempus ipsum massa sed odio. Quisque vel libero id est consequat feugiat vitae et nisl.
+                        </div>
+                        <div class= "rightMainContentItem">
+                            Mauris quis tempor metus. Sed consectetur, neque eu consectetur interdum, nisl nibh rhoncus tortor, a tempus ipsum massa sed odio. Quisque vel libero id est consequat feugiat vitae et nisl.
+                        </div>
+                </div>
+             </div>
         </div>
     </div>
 </body>
