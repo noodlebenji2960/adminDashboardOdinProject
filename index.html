@@ -15,41 +15,46 @@
     />
 </head>
 <body>
-    <div id="container">
+    <div id="page_container">
         <div id="sidebar">
-            <div id="branding">
-                <a href="#"><svg><image xlink:href="./icons/dashboard.svg"/></svg>
-                Insure&Go</a><br>
+            <div id="top_sidebar">
+                <img src="./images/john.jpg">
+                <div id="userInfo">
+                    <div id="hiThere">
+                        Hello!
+                    </div>
+                    <div id="username">
+                        <a>John
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg></a>
+                    </div>
+                    
+                </div>
             </div>
-                <a href="#"><div id="close">
+                <a href="#" title="Toggle Menu"><div id="close">
                     <div class="nav-toggle">
                     <span class="bar x"></span>
                     <span class="bar x"></span>
                     <span class="bar x"></span>
                     </div>
-                    Menu
+                    Toggle Menu
                 </div></a>
 
                 <div id="menu_items">
-                    <a href="#"><svg><image xlink:href="./icons/home.svg"/></svg>
+                    <a href="#" title="Home"><svg><image href="./icons/home.svg" /></svg>
                         Home</a>
-                    <a href="#"><svg><image xlink:href="./icons/notify.svg"/></svg>
+                    <a href="#" title="Notifications"><svg><image href="./icons/notify.svg"/></svg>
                         Notifications</a>
-                    <a href="#"><svg><image xlink:href="./icons/profile.svg"/></svg>
-                        Profile</a>
-                    <a href="#"><svg><image xlink:href="./icons/messages.svg"/></svg>
-                        Messages</a>
-                    <a href="#"><svg><image xlink:href="./icons/history.svg"/></svg>
-                        History</a>
-                    <a href="#"><svg><image xlink:href="./icons/tasks.svg"/></svg>
+                    <a href="#" title="Tasks"><svg><image href="./icons/tasks.svg"/></svg>
                         Tasks</a>
-                    <a href="#"><svg><image xlink:href="./icons/communities.svg"/></svg>
-                        Co.Departments</a>
-                    <a href="#"><svg><image xlink:href="./icons/settings.svg"/></svg>Settings</a>
-                    <a href="#"><svg><image xlink:href="./icons/support.svg"/></svg>
-                        Support</a>
-                    <a href="#"><svg><image xlink:href="./icons/pen-plus.svg"/></svg>New Note</a>
-                    <a href="#"><svg><image xlink:href="./icons/calendar-month.svg"/></svg>Calendar</a>
+                    <a href="#" title="Messages"><svg><image href="./icons/messages.svg"/></svg>
+                        Messages</a>
+                    <a href="#" title="Contacts"><svg><image href="./icons/communities.svg"/></svg>
+                        Contacts</a>
+                    <a href="#" title="Products"><svg><image href="./icons/cart.svg"/></svg>
+                        Products</a>
+                    <a href="#" title="New Note"><svg><image href="./icons/pen-plus.svg"/></svg>New Note</a>
+                    <a href="#" title="Calender"><svg><image href="./icons/calendar-month.svg"/></svg>Calendar</a>
+                    <a href="#" title="Settings"><svg><image href="./icons/settings.svg"/></svg>Settings</a>
                 </div>
                 
                 <div class="codedby">
@@ -58,34 +63,115 @@
             
         </div>
         <div id="header">
-            <div id="right_header">
-                <div id="userInfo">
-                    <div id="hiThere">Hello!</div>
-                    <div id="username">
-                        John
-                    </div>
-                </div>
-                <img src="./images/john.jpg">
-                </div>
-            <div id="fav">
-                    <div id="chart_div" style="width:auto; height: auto;"></div>
-            </div>
-        </div>
-        <div id="main-content">
-            <div class="main_cards_title_section">
-                <h3>Members</h3>
-            </div>
-            <div id="main_cards">
 
-                <div class= "main_card">
-                    <div class="main_card_profile_pic">
+        </div>
+        <div id="main_content">
+          <div id="top_container">
+            <div id="top_left_container">
+              <div id="donutchart1"></div>
+            </div>
+            <div id="top_right_container">
+              <div id="schedule_paper">
+                <div id="schedule_pattern">
+                  <div id="schedule_content">
+                    <div id="schedule_top">
+                      <b><span id="realTime"></span></b>
+                    </div>
+                    <div id="schedule_left">
+                      <span id="h00">00:00<br></span>
+                      <span id="h01">01:00<br></span>
+                      <span id="h02">02:00<br></span>
+                      <span id="h03">03:00<br></span>
+                      <span id="h04">04:00<br></span>
+                      <span id="h05">05:00<br></span>
+                      <span id="h06">06:00<br></span>
+                      <span id="h07">07:00<br></span>
+                      <span id="h08">08:00<br></span>
+                      <span id="h09">09:00<br></span>
+                      <span id="h10">10:00<br></span>
+                      <span id="h11">11:00<br></span>
+                      <span id="h12">12:00<br></span>
+                      <span id="h13">13:00<br></span>
+                      <span id="h14">14:00<br></span>
+                      <span id="h15">15:00<br></span>
+                      <span id="h16">16:00<br></span>
+                      <span id="h17">17:00<br></span>
+                      <span id="h18">18:00<br></span>
+                      <span id="h19">19:00<br></span>
+                      <span id="h20">20:00<br></span>
+                      <span id="h21">21:00<br></span>
+                      <span id="h22">22:00<br></span>
+                      <span id="h23">23:00<br></span>
+                    </div>
+                    <div id="schedule_right">
+                      <span id="event_descriptionh00" class="event_description"> <br></span>
+                      <span id="event_descriptionh01" class="event_description"> <br></span>
+                      <span id="event_descriptionh02" class="event_description"> <br></span>
+                      <span id="event_descriptionh03" class="event_description"> <br></span>
+                      <span id="event_descriptionh04" class="event_description"> <br></span>
+                      <span id="event_descriptionh05" class="event_description"> <br></span>
+                      <span id="event_descriptionh06" class="event_description"> <br></span>
+                      <span id="event_descriptionh07" class="event_description"> <br></span>
+                      <span id="event_descriptionh08" class="event_description"> <br></span>
+                      <span id="event_descriptionh09" class="event_description"> <br></span>
+                      <span id="event_descriptionh10" class="event_description"> <br></span>
+                      <span id="event_descriptionh11" class="event_description"> <br></span>
+                      <span id="event_descriptionh12" class="event_description"> <br></span>
+                      <span id="event_descriptionh13" class="event_description"> <br></span>
+                      <span id="event_descriptionh14" class="event_description"> <br></span>
+                      <span id="event_descriptionh15" class="event_description"> <br></span>
+                      <span id="event_descriptionh16" class="event_description"> <br></span>
+                      <span id="event_descriptionh17" class="event_description"> <br></span>
+                      <span id="event_descriptionh18" class="event_description"> <br></span>
+                      <span id="event_descriptionh19" class="event_description"> <br></span>
+                      <span id="event_descriptionh20" class="event_description"><br></span>
+                      <span id="event_descriptionh21" class="event_description"> <br></span>
+                      <span id="event_descriptionh22" class="event_description"> <br></span>
+                      <span id="event_descriptionh23" class="event_description"> <br></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="right_bottom_container">
+            <div id="right_bottom_chart_container">
+              <div id="right_chart_div"></div>
+              <div id="postit_section">
+              <div class="postit first">
+                <ul>
+                  <li>finish claims report</li>
+                  <li>speak with glen about holidays</li>
+                  <li>call marketing</li>
+                </ul>
+              </div>
+              <div class="postit overlap">
+                Monthly claims ratio down 5%
+                Customer satisfaction up 6.5%
+              </div>
+              <div class="postit overlap">
+                speak with glen about holidays
+              </div>
+            </div>
+            </div>
+            <div class="right_cards_title_section">
+              <h3>Team Roster</h3>
+              <svg><image id="chevron_teamroster" href="./icons/chevron-up.svg" onClick="collapseTeamRoster()"/></svg>
+              <a>Filter</a>
+              <a>Sort</a>
+            </div>
+            <div id="right_cards_container">
+
+                <div class= "team_card">
+                    <div class="card_profile_pic">
                         <img src="./images/cherry.jpg">
                     </div>
                     <div class="name_status"><h4>Chi Len Martinez</h4>
+                      <div class="onlineStatus">last online 1 day ago</div>
+                      <div class="assigned">Assigned Tasks: 5</div>
                         <div class="position">Customer Service Rep.L2</div>
-                        <div class="onlineStatus">last online 1 day ago</div>
                     </div>
-                    <div id="rep_chart_div" style="width:auto; height: auto;"></div>
+                    <div id="rep_chart_div" class="rep_chart"></div>
                     <table class="rep_table">
                         <thead>
                           <tr>
@@ -108,92 +194,558 @@
                           </tr>
                         </tbody>
                         </table>
-                    <div class="main_card_icons">
-                        <svg><image xlink:href="./icons/fav.svg" onClick="fav()"/></svg>
-                        <svg><image xlink:href="./icons/eyeplus.svg" onclick="eyeplus()"/></svg>
-                        <svg><image xlink:href="./icons/fork.svg" onclick="fork.svg"/></svg>
+                    <div class="card_fullscreen">
+                        <a href=""><svg><image href="./icons/arrow-expand.svg" onClick="fav()"/></svg></a>
                     </div>
+                    <div class="card_icons">
+                        <a href="#" title="Tasks"><svg><image href="./icons/tasks-outline.svg"/></svg></a>
+                        <a href="#" title="Tasks"><svg><image href="./icons/history-outline.svg"/></svg></a>
+                        <a href="#" title="Chat"><svg><image href="./icons/message-outline.svg" onClick="fav()"/></svg>
+                        <a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a>
+                    </div>
+
                 </div>
 
-                <div class= "main_card">
-                    <div class="main_card_profile_pic">
+                <div class= "team_card">
+                    <div class="card_profile_pic">
                         <img src="./images/glen.jpg">
                     </div>
-                    <div class="name_status"><h4>Glen Adeline Amando</h4>
-                        <div class="position">Customer Service Rep.L1</div>
-                        <div class="onlineStatus">last online 15 minutes ago</div>
+                    <div class="name_status"><h4>Glen Harrison</h4>
+                      <div class="onlineStatus">last online 1 day ago</div>
+                      <div class="assigned">Assigned Tasks: 5</div>
+                      <div class="position">Customer Service Rep.L2</div>
                     </div>
-
-                    <div class="main_card_icons">
-                        <svg><image xlink:href="./icons/fav.svg" onClick="fav()"/></svg>
-                        <svg><image xlink:href="./icons/eyeplus.svg" onclick="eyeplus()"/></svg>
-                        <svg><image xlink:href="./icons/fork.svg" onclick="fork.svg"/></svg>
+                    <div id="rep_chart_div2" class="rep_chart"></div>
+                    <table class="rep_table">
+                        <thead>
+                          <tr>
+                            <th class="tg-0lax">Accepted</th>
+                            <th class="tg-0lax">Resolved</th>
+                            <th class="tg-0lax">Referred</th>
+                            <th class="tg-0lax">Paused</th>
+                            <th class="tg-0lax">Deferred</th>
+                            <th class="tg-0lax">Removed</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="tg-0lax">21</td>
+                            <td class="tg-0lax">17</td>
+                            <td class="tg-0lax">2</td>
+                            <td class="tg-0lax">0</td>
+                            <td class="tg-0lax">4</td>
+                            <td class="tg-0lax">2</td>
+                          </tr>
+                        </tbody>
+                        </table>
+                    <div class="card_fullscreen">
+                        <a href=""><svg><image href="./icons/arrow-expand.svg" onClick="fav()"/></svg></a>
+                    </div>
+                    <div class="card_icons">
+                        <a href="#" title="Tasks"><svg><image href="./icons/tasks-outline.svg"/></svg></a>
+                        <a href="#" title="Tasks"><svg><image href="./icons/history-outline.svg"/></svg></a>
+                        <a href="#" title="Chat"><svg><image href="./icons/message-outline.svg" onClick="fav()"/></svg>
+                        <a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a>
                     </div>
                 </div>
 
-                <div class= "main_card">
-                    <div class="main_card_profile_pic">
+                <div class= "team_card">
+                    <div class="card_profile_pic">
                         <img src="./images/sandra.jpg">
                     </div>
                     <div class="name_status"><h4>Lucienne Bradford</h4>
+                      <div class="onlineStatus">Online</div>
+                      <div class="assigned">Assigned Tasks: 5</div>
                         <div class="position">Customer Service Rep.L3</div>
-                        <div class="onlineStatus">last online 3 hours ago</div>
                     </div>
-
-                    <div class="main_card_icons">
-                        <svg><image xlink:href="./icons/fav.svg" onClick="fav()"/></svg>
-                        <svg><image xlink:href="./icons/eyeplus.svg" onclick="eyeplus()"/></svg>
-                        <svg><image xlink:href="./icons/fork.svg" onclick="fork.svg"/></svg>
+                    <div id="rep_chart_div3" class="rep_chart"></div>
+                    <table class="rep_table">
+                        <thead>
+                          <tr>
+                            <th class="tg-0lax">Accepted</th>
+                            <th class="tg-0lax">Resolved</th>
+                            <th class="tg-0lax">Referred</th>
+                            <th class="tg-0lax">Paused</th>
+                            <th class="tg-0lax">Deferred</th>
+                            <th class="tg-0lax">Removed</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="tg-0lax">20</td>
+                            <td class="tg-0lax">16</td>
+                            <td class="tg-0lax">2</td>
+                            <td class="tg-0lax">0</td>
+                            <td class="tg-0lax">3</td>
+                            <td class="tg-0lax">1</td>
+                          </tr>
+                        </tbody>
+                        </table>
+                    <div class="card_fullscreen">
+                        <a href=""><svg><image href="./icons/arrow-expand.svg" onClick="fav()"/></svg></a>
+                    </div>
+                    <div class="card_icons">
+                        <a href="#" title="Tasks"><svg><image href="./icons/tasks-outline.svg"/></svg></a>
+                        <a href="#" title="Tasks"><svg><image href="./icons/history-outline.svg"/></svg></a>
+                        <a href="#" title="Chat"><svg><image href="./icons/message-outline.svg" onClick="fav()"/></svg>
+                        <a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a>
                     </div>
                 </div>
-
-                <div class= "main_card">
-                    <div class="main_card_profile_pic">
+                <div class= "team_card">
+                    <div class="card_profile_pic">
+                        <img src="./images/maria.jpg">
+                    </div>
+                    <div class="name_status"><h4>Elsie Porter</h4>
+                      <div class="onlineStatus">Online</div>
+                      <div class="assigned">Assigned Tasks: 3</div>
+                      <div class="position">Customer Service Rep.L3</div>
+                    </div>
+                    <div id="rep_chart_div4" class="rep_chart"></div>
+                    <table class="rep_table">
+                        <thead>
+                          <tr>
+                            <th class="tg-0lax">Accepted</th>
+                            <th class="tg-0lax">Resolved</th>
+                            <th class="tg-0lax">Referred</th>
+                            <th class="tg-0lax">Paused</th>
+                            <th class="tg-0lax">Deferred</th>
+                            <th class="tg-0lax">Removed</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="tg-0lax">19</td>
+                            <td class="tg-0lax">16</td>
+                            <td class="tg-0lax">3</td>
+                            <td class="tg-0lax">1</td>
+                            <td class="tg-0lax">2</td>
+                            <td class="tg-0lax">3</td>
+                          </tr>
+                        </tbody>
+                        </table>
+                    <div class="card_fullscreen">
+                        <a href=""><svg><image href="./icons/arrow-expand.svg" onClick="fav()"/></svg></a>
+                    </div>
+                    <div class="card_icons">
+                        <a href="#" title="Tasks"><svg><image href="./icons/tasks-outline.svg"/></svg></a>
+                        <a href="#" title="Tasks"><svg><image href="./icons/history-outline.svg"/></svg></a>
+                        <a href="#" title="Chat"><svg><image href="./icons/message-outline.svg" onClick="fav()"/></svg>
+                        <a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a>
+                    </div>
+                </div>
+                <div class= "team_card">
+                    <div class="card_profile_pic">
+                        <img src="./images/sarah.jpg">
+                    </div>
+                    <div class="name_status"><h4>Ella-Louise Morales</h4>
+                      <div class="onlineStatus">last online 3 hours ago</div>
+                      <div class="assigned">Assigned Tasks: 7</div>
+                        <div class="position">Customer Service Rep.L3</div>
+                    </div>
+                    <div id="rep_chart_div5" class="rep_chart"></div>
+                    <table class="rep_table">
+                        <thead>
+                          <tr>
+                            <th class="tg-0lax">Accepted</th>
+                            <th class="tg-0lax">Resolved</th>
+                            <th class="tg-0lax">Referred</th>
+                            <th class="tg-0lax">Paused</th>
+                            <th class="tg-0lax">Deferred</th>
+                            <th class="tg-0lax">Removed</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="tg-0lax">17</td>
+                            <td class="tg-0lax">16</td>
+                            <td class="tg-0lax">3</td>
+                            <td class="tg-0lax">1</td>
+                            <td class="tg-0lax">5</td>
+                            <td class="tg-0lax">6</td>
+                          </tr>
+                        </tbody>
+                        </table>
+                    <div class="card_fullscreen">
+                        <a href=""><svg><image href="./icons/arrow-expand.svg" onClick="fav()"/></svg></a>
+                    </div>
+                    <div class="card_icons">
+                        <a href="#" title="Tasks"><svg><image href="./icons/tasks-outline.svg"/></svg></a>
+                        <a href="#" title="Tasks"><svg><image href="./icons/history-outline.svg"/></svg></a>
+                        <a href="#" title="Chat"><svg><image href="./icons/message-outline.svg" onClick="fav()"/></svg>
+                        <a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a>
+                    </div>
+                </div>
+                <div class= "team_card">
+                    <div class="card_profile_pic">
                         <img src="./images/morgan.jpg">
                     </div>
-                    <div class="name_status"><h4>Precious Henderson</h4>
-                        <div class="position">Customer Service Rep. L1</div>
-                        <div class="onlineStatus">last online 25 minutes ago</div>
+                    <div class="name_status"><h4>Rosalind Ayers</h4>
+                        <div class="assigned">Assigned Tasks: 4</div>
+                        <div class="position">Customer Service Rep.L3</div>
+                        <div class="onlineStatus">Online</div>
                     </div>
-
-                    <div class="main_card_icons">
-                        <svg><image xlink:href="./icons/fav.svg" onClick="fav()"/></svg>
-                        <svg><image xlink:href="./icons/eyeplus.svg" onclick="eyeplus()"/></svg>
-                        <svg><image xlink:href="./icons/fork.svg" onclick="fork.svg"/></svg>
+                    <div id="rep_chart_div6" class="rep_chart">
+                    </div>
+                    <table class="rep_table">
+                        <thead>
+                          <tr>
+                            <th class="tg-0lax">Accepted</th>
+                            <th class="tg-0lax">Resolved</th>
+                            <th class="tg-0lax">Referred</th>
+                            <th class="tg-0lax">Paused</th>
+                            <th class="tg-0lax">Deferred</th>
+                            <th class="tg-0lax">Removed</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="tg-0lax">21</td>
+                            <td class="tg-0lax">17</td>
+                            <td class="tg-0lax">2</td>
+                            <td class="tg-0lax">0</td>
+                            <td class="tg-0lax">4</td>
+                            <td class="tg-0lax">2</td>
+                          </tr>
+                        </tbody>
+                        </table>
+                    <div class="card_fullscreen">
+                        <a href=""><svg><image href="./icons/arrow-expand.svg" onClick="fav()"/></svg></a>
+                    </div>
+                    <div class="card_icons">
+                        <a href="#" title="Tasks"><svg><image href="./icons/tasks-outline.svg"/></svg></a>
+                        <a href="#" title="Tasks"><svg><image href="./icons/history-outline.svg"/></svg></a>
+                        <a href="#" title="Chat"><svg><image href="./icons/message-outline.svg" onClick="fav()"/></svg>
+                        <a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a>
                     </div>
                 </div>
-                
+                <div class= "team_card">
+                  <div class="card_profile_pic">
+                      <img src="./images/morgan.jpg">
+                  </div>
+                  <div class="name_status"><h4>Rosalind Ayers</h4>
+                      <div class="assigned">Assigned Tasks: 4</div>
+                      <div class="position">Customer Service Rep.L3</div>
+                      <div class="onlineStatus">Online</div>
+                  </div>
+                  <div id="rep_chart_div7" class="rep_chart">
+                  </div>
+                  <table class="rep_table">
+                      <thead>
+                        <tr>
+                          <th class="tg-0lax">Accepted</th>
+                          <th class="tg-0lax">Resolved</th>
+                          <th class="tg-0lax">Referred</th>
+                          <th class="tg-0lax">Paused</th>
+                          <th class="tg-0lax">Deferred</th>
+                          <th class="tg-0lax">Removed</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="tg-0lax">21</td>
+                          <td class="tg-0lax">17</td>
+                          <td class="tg-0lax">2</td>
+                          <td class="tg-0lax">0</td>
+                          <td class="tg-0lax">4</td>
+                          <td class="tg-0lax">2</td>
+                        </tr>
+                      </tbody>
+                      </table>
+                  <div class="card_fullscreen">
+                      <a href=""><svg><image href="./icons/arrow-expand.svg" onClick="fav()"/></svg></a>
+                  </div>
+                  <div class="card_icons">
+                      <a href="#" title="Tasks"><svg><image href="./icons/tasks-outline.svg"/></svg></a>
+                      <a href="#" title="Tasks"><svg><image href="./icons/history-outline.svg"/></svg></a>
+                      <a href="#" title="Chat"><svg><image href="./icons/message-outline.svg" onClick="fav()"/></svg>
+                      <a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a>
+                  </div>
+              </div>
+            <div class= "team_card">
+              <div class="card_profile_pic">
+                  <img src="./images/morgan.jpg">
+              </div>
+              <div class="name_status"><h4>Rosalind Ayers</h4>
+                  <div class="assigned">Assigned Tasks: 4</div>
+                  <div class="position">Customer Service Rep.L3</div>
+                  <div class="onlineStatus">Online</div>
+              </div>
+              <div id="rep_chart_div9" class="rep_chart">
+              </div>
+              <table class="rep_table">
+                  <thead>
+                    <tr>
+                      <th class="tg-0lax">Accepted</th>
+                      <th class="tg-0lax">Resolved</th>
+                      <th class="tg-0lax">Referred</th>
+                      <th class="tg-0lax">Paused</th>
+                      <th class="tg-0lax">Deferred</th>
+                      <th class="tg-0lax">Removed</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="tg-0lax">21</td>
+                      <td class="tg-0lax">17</td>
+                      <td class="tg-0lax">2</td>
+                      <td class="tg-0lax">0</td>
+                      <td class="tg-0lax">4</td>
+                      <td class="tg-0lax">2</td>
+                    </tr>
+                  </tbody>
+                  </table>
+              <div class="card_fullscreen">
+                  <a href=""><svg><image href="./icons/arrow-expand.svg" onClick="fav()"/></svg></a>
+              </div>
+              <div class="card_icons">
+                  <a href="#" title="Tasks"><svg><image href="./icons/tasks-outline.svg"/></svg></a>
+                  <a href="#" title="Tasks"><svg><image href="./icons/history-outline.svg"/></svg></a>
+                  <a href="#" title="Chat"><svg><image href="./icons/message-outline.svg" onClick="fav()"/></svg>
+                  <a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a>
+              </div>
+          </div>
             </div>
-            <div class="right_main_content_title_section">
-                <h3>Team</h3>
-            </div>
-            <div id="right_main_content">
-                <div class="right_section">
-                    <div class= "right_main_content_item">
+          </div>
 
+          <div id="left_bottom_container">
+          <div class="left_bottom_container_title">
+                <h3>Claims</h3>
+                <svg><image id="chevron_taskpool" href="./icons/chevron-up.svg" onClick="collapseTaskpool()"/></svg>
+                <a>Filter</a>
+                <a>Sort</a>
+                <input type="search" class="searchbox">
+          </div>
+          <div id="left_bottom_content">
+              <div id="left_chart_section">
+                <div id="claims_chart"></div>
+              </div>
+                <div id="left_section1">
+                  <h3>Assigned (29)</h3>
+                    <div class= "left_main_content_item">
+                        <table class="tg">
+                            <thead>
+                              <tr>
+                                <th class="tg-fymr">Policy#</th>
+                                <th class="tg-fymr">Type</th>
+                                <th class="tg-fymr">Rep.</th>
+                                <th class="tg-fymr">Product</th>
+                                <th class="tg-fymr"></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td class="tg-0pky">#6877</td>
+                                <td class="tg-0pky">Conservation</td>
+                                <td class="tg-0pky">Chi Len</td>
+                                <td class="tg-0pky">Survivorship plus</td>
+                                <td class="tg-0pky"><a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a></td>
+                              </tr>
+                              <tr>
+                                <td class="tg-0pky">#6877</td>
+                                <td class="tg-0lax">Marketing</td>
+                                <td class="tg-0lax">Lucienne</td>
+                                <td class="tg-0lax">Accumulation</td>
+                                <td class="tg-0pky"><a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a></td>
+                              </tr>
+                              <tr>
+                                <td class="tg-0pky">#6877</td>
+                                <td class="tg-0lax">Death Claim</td>
+                                <td class="tg-0pky">Elsie</td>
+                                <td class="tg-0lax">Guaranteed term</td>
+                                <td class="tg-0pky"><a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a></td>
+                              </tr>
+                              <tr>
+                                <td class="tg-0pky">#6877</td>
+                                <td class="tg-0lax">Marketing</td>
+                                <td class="tg-0pky">Rosalind</td>
+                                <td class="tg-0lax">Survivorship plus</td>
+                                <td class="tg-0pky"><a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a></td>
+                              </tr>
+                              <tr>
+                                <td class="tg-0pky">#6877</td>
+                                <td class="tg-0lax">Conservation</td>
+                                <td class="tg-0pky">Chi Len</td>
+                                <td class="tg-0lax">Guaranteed term</td>
+                                <td class="tg-0pky"><a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a></td>
+                              </tr>
+                              <tr>
+                                <td class="tg-0pky">#6877</td>
+                                <td class="tg-0lax">Marketing</td>
+                                <td class="tg-0pky">Ella</td>
+                                <td class="tg-0lax">Whole life</td>
+                                <td class="tg-0pky"><a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a></td>
+                              </tr>
+                              <tr>
+                                <td class="tg-0pky">#6877</td>
+                                <td class="tg-0lax">Death claim</td>
+                                <td class="tg-0pky">Ella</td>
+                                <td class="tg-0lax">Survivorship Plus</td>
+                                <td class="tg-0pky"><a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a></td>
+                              </tr>
+                              <tr>
+                                <td class="tg-0pky">#6877</td>
+                                <td class="tg-0lax">Marketing</td>
+                                <td class="tg-0pky">Rosalind</td>
+                                <td class="tg-0lax">Accumulation</td>
+                                <td class="tg-0pky"><a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a></td>
+                              </tr>
+                              <tr>
+                                <td class="tg-0pky">#6877</td>
+                                <td class="tg-0lax">Death claim</td>
+                                <td class="tg-0pky">Glen</td>
+                                <td class="tg-0lax">Whole life</td>
+                                <td class="tg-0pky"><a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a></td>
+                              </tr>
+                            </tbody>
+                            </table>
                     </div>
-                    <div class= "right_main_content_item">
-
+                </div>
+                <div id="left_section2">
+                  <h3>Queue (18)</h3>
+                    <div class= "left_main_content_item">
+                        <table class="tg">
+                            <thead>
+                              <tr>
+                                <th class="tg-fymr">Policy#</th>
+                                <th class="tg-fymr">Type</th>
+                                <th class="tg-fymr">Policyowner</th>
+                                <th class="tg-fymr">Product</th>
+                                <th class="tg-fymr"></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td class="tg-0pky">#6877</td>
+                                <td class="tg-0pky">Conservation</td>
+                                <td class="tg-0pky">Scott Stuart</td>
+                                <td class="tg-0pky">Survivorship plus</td>
+                                <td class="tg-0pky"><a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a></td>
+                              </tr>
+                              <tr>
+                                <td class="tg-0pky">#6877</td>
+                                <td class="tg-0lax">Marketing</td>
+                                <td class="tg-0lax">Ashley Whitaker</td>
+                                <td class="tg-0lax">Accumulation</td>
+                                <td class="tg-0pky"><a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a></td>
+                              </tr>
+                              <tr>
+                                <td class="tg-0pky">#6877</td>
+                                <td class="tg-0lax">Death Claim</td>
+                                <td class="tg-0lax">Oscar Stanley</td>
+                                <td class="tg-0lax">Guaranteed term</td>
+                                <td class="tg-0pky"><a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a></td>
+                              </tr>
+                              <tr>
+                                <td class="tg-0pky">#6877</td>
+                                <td class="tg-0lax">Marketing</td>
+                                <td class="tg-0lax">Andy Murray</td>
+                                <td class="tg-0lax">Survivorship plus</td>
+                                <td class="tg-0pky"><a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a></td>
+                              </tr>
+                              <tr>
+                                <td class="tg-0pky">#6877</td>
+                                <td class="tg-0lax">Conservation</td>
+                                <td class="tg-0lax">George Ham</td>
+                                <td class="tg-0lax">Guaranteed term</td>
+                                <td class="tg-0pky"><a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a></td>
+                              </tr>
+                              <tr>
+                                <td class="tg-0pky">#6877</td>
+                                <td class="tg-0lax">Marketing</td>
+                                <td class="tg-0lax">Eric Homestead</td>
+                                <td class="tg-0lax">Whole life</td>
+                                <td class="tg-0pky"><a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a></td>
+                              </tr>
+                              <tr>
+                                <td class="tg-0pky">#6877</td>
+                                <td class="tg-0lax">Death claim</td>
+                                <td class="tg-0lax">Alfred Davis</td>
+                                <td class="tg-0lax">Survivorship Plus</td>
+                                <td class="tg-0pky"><a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a></td>
+                              </tr>
+                              <tr>
+                                <td class="tg-0pky">#6877</td>
+                                <td class="tg-0lax">Marketing</td>
+                                <td class="tg-0lax">Anna White</td>
+                                <td class="tg-0lax">Accumulation</td>
+                                <td class="tg-0pky"><a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a></td>
+                              </tr>
+                              <tr>
+                                <td class="tg-0pky">#6877</td>
+                                <td class="tg-0lax">Death claim</td>
+                                <td class="tg-0lax">Katie Stein</td>
+                                <td class="tg-0lax">Whole life</td>
+                                <td class="tg-0pky"><a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a></td>
+                              </tr>
+                              <tr>
+                                <td class="tg-0pky">#6877</td>
+                                <td class="tg-0pky">Conservation</td>
+                                <td class="tg-0pky">Scott Stuart</td>
+                                <td class="tg-0pky">Survivorship plus</td>
+                                <td class="tg-0pky"><a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a></td>
+                              </tr>
+                              <tr>
+                                <td class="tg-0pky">#6877</td>
+                                <td class="tg-0lax">Marketing</td>
+                                <td class="tg-0lax">Ashley Whitaker</td>
+                                <td class="tg-0lax">Accumulation</td>
+                                <td class="tg-0pky"><a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a></td>
+                              </tr>
+                              <tr>
+                                <td class="tg-0pky">#6877</td>
+                                <td class="tg-0lax">Death Claim</td>
+                                <td class="tg-0lax">Oscar Stanley</td>
+                                <td class="tg-0lax">Guaranteed term</td>
+                                <td class="tg-0pky"><a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a></td>
+                              </tr>
+                              <tr>
+                                <td class="tg-0pky">#6877</td>
+                                <td class="tg-0lax">Marketing</td>
+                                <td class="tg-0lax">Andy Murray</td>
+                                <td class="tg-0lax">Survivorship plus</td>
+                                <td class="tg-0pky"><a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a></td>
+                              </tr>
+                              <tr>
+                                <td class="tg-0pky">#6877</td>
+                                <td class="tg-0lax">Conservation</td>
+                                <td class="tg-0lax">George Ham</td>
+                                <td class="tg-0lax">Guaranteed term</td>
+                                <td class="tg-0pky"><a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a></td>
+                              </tr>
+                              <tr>
+                                <td class="tg-0pky">#6877</td>
+                                <td class="tg-0lax">Marketing</td>
+                                <td class="tg-0lax">Eric Homestead</td>
+                                <td class="tg-0lax">Whole life</td>
+                                <td class="tg-0pky"><a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a></td>
+                              </tr>
+                              <tr>
+                                <td class="tg-0pky">#6877</td>
+                                <td class="tg-0lax">Death claim</td>
+                                <td class="tg-0lax">Alfred Davis</td>
+                                <td class="tg-0lax">Survivorship Plus</td>
+                                <td class="tg-0pky"><a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a></td>
+                              </tr>
+                              <tr>
+                                <td class="tg-0pky">#6877</td>
+                                <td class="tg-0lax">Marketing</td>
+                                <td class="tg-0lax">Anna White</td>
+                                <td class="tg-0lax">Accumulation</td>
+                                <td class="tg-0pky"><a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a></td>
+                              </tr>
+                              <tr>
+                                <td class="tg-0pky">#6877</td>
+                                <td class="tg-0lax">Death claim</td>
+                                <td class="tg-0lax">Katie Stein</td>
+                                <td class="tg-0lax">Whole life</td>
+                                <td class="tg-0pky"><a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a></td>
+                              </tr>
+                            </tbody>
+                            </table>
                     </div>
                 </div>
-                <div class="right_main_content_title_section">
-                    <h3>Trending</h3>
-                </div>
-                <div class="right_section">
-                        <div class= "right_main_content_item">
-                            
-                        </div>
-                        <div class="right_main_content_item">
-                            Mauris quis tempor metus. Sed consectetur, neque eu consectetur interdum, nisl nibh rhoncus tortor, a tempus ipsum massa sed odio. Quisque vel libero id est consequat feugiat vitae et nisl.
-                        </div>
-                        <div class= "right_main_content_item">
-                            Mauris quis tempor metus. Sed consectetur, neque eu consectetur interdum, nisl nibh rhoncus tortor, a tempus ipsum massa sed odio. Quisque vel libero id est consequat feugiat vitae et nisl.
-                        </div>
-                        <div class= "right_main_content_item">
-                            Mauris quis tempor metus. Sed consectetur, neque eu consectetur interdum, nisl nibh rhoncus tortor, a tempus ipsum massa sed odio. Quisque vel libero id est consequat feugiat vitae et nisl.
-                        </div>
-                </div>
-             </div>
+          </div>
+          </div>
         </div>
     </div>
 </body>
