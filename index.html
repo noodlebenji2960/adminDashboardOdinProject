@@ -17,20 +17,8 @@
 <body>
     <div id="page_container">
         <div id="sidebar">
-            <div id="top_sidebar">
-                <img src="./images/john.jpg">
-                <div id="userInfo">
-                    <div id="hiThere">
-                        Hello!
-                    </div>
-                    <div id="username">
-                        <a>John
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg></a>
-                    </div>
-                    
-                </div>
-            </div>
-                <a href="#" title="Toggle Menu"><div id="close">
+                <div id="menu_items">
+                  <a href="#" title="Toggle Menu" onclick="clickSetSidebar()"><div id="close">
                     <div class="nav-toggle">
                     <span class="bar x"></span>
                     <span class="bar x"></span>
@@ -38,8 +26,6 @@
                     </div>
                     Toggle Menu
                 </div></a>
-
-                <div id="menu_items">
                     <a href="#" title="Home"><svg><image href="./icons/home.svg" /></svg>
                         Home</a>
                     <a href="#" title="Notifications"><svg><image href="./icons/notify.svg"/></svg>
@@ -55,15 +41,28 @@
                     <a href="#" title="New Note"><svg><image href="./icons/pen-plus.svg"/></svg>New Note</a>
                     <a href="#" title="Calender"><svg><image href="./icons/calendar-month.svg"/></svg>Calendar</a>
                     <a href="#" title="Settings"><svg><image href="./icons/settings.svg"/></svg>Settings</a>
+                <div class="codedby"><a href="https://github.com/noodlebenji2960" target="_blank"><largeEmoji>🐤</largeEmoji>Github</a>
                 </div>
-                
-                <div class="codedby">
-                    <a href="https://github.com/noodlebenji2960" target="_blank"><largeEmoji>🐤</largeEmoji>Github</a>
-                </div>
+              </div>
             
         </div>
         <div id="header">
-
+          <div id="logo">
+            <svg><image id="Logo" href="./icons/logo.svg"></svg>
+            <logo>GoodCatch Insurance</logo>&ensp;-&ensp;
+            <div id="realTime"></div>
+          </div>
+          <div id="user">
+            <div id="userInfo">
+                <div id="hiThere">
+                    Hello!
+                </div>
+                <div id="username">
+                    John
+                </div>
+             </div>
+             <img src="./images/john.jpg">
+        </div>
         </div>
         <div id="main_content">
           <div id="top_container">
@@ -74,9 +73,6 @@
               <div id="schedule_paper">
                 <div id="schedule_pattern">
                   <div id="schedule_content">
-                    <div id="schedule_top">
-                      <b><span id="realTime"></span></b>
-                    </div>
                     <div id="schedule_left">
                       <span id="h00">00:00<br></span>
                       <span id="h01">01:00<br></span>
@@ -104,24 +100,24 @@
                       <span id="h23">23:00<br></span>
                     </div>
                     <div id="schedule_right">
-                      <span id="event_descriptionh00" class="event_description"> <br></span>
-                      <span id="event_descriptionh01" class="event_description"> <br></span>
-                      <span id="event_descriptionh02" class="event_description"> <br></span>
-                      <span id="event_descriptionh03" class="event_description"> <br></span>
-                      <span id="event_descriptionh04" class="event_description"> <br></span>
-                      <span id="event_descriptionh05" class="event_description"> <br></span>
-                      <span id="event_descriptionh06" class="event_description"> <br></span>
-                      <span id="event_descriptionh07" class="event_description"> <br></span>
-                      <span id="event_descriptionh08" class="event_description"> <br></span>
-                      <span id="event_descriptionh09" class="event_description"> <br></span>
-                      <span id="event_descriptionh10" class="event_description"> <br></span>
+                      <span id="event_descriptionh0" class="event_description"> <br></span>
+                      <span id="event_descriptionh1" class="event_description"> <br></span>
+                      <span id="event_descriptionh2" class="event_description"> <br></span>
+                      <span id="event_descriptionh3" class="event_description"> <br></span>
+                      <span id="event_descriptionh4" class="event_description"> <br></span>
+                      <span id="event_descriptionh5" class="event_description"> <br></span>
+                      <span id="event_descriptionh6" class="event_description"> <br></span>
+                      <span id="event_descriptionh7" class="event_description"> <br></span>
+                      <span id="event_descriptionh8" class="event_description"> <br></span>
+                      <span id="event_descriptionh9" class="event_description">Daily Rollup<br></span>
+                      <span id="event_descriptionh10" class="event_description">Regional Meeting<br></span>
                       <span id="event_descriptionh11" class="event_description"> <br></span>
-                      <span id="event_descriptionh12" class="event_description"> <br></span>
+                      <span id="event_descriptionh12" class="event_description">coffee with glen<br></span>
                       <span id="event_descriptionh13" class="event_description"> <br></span>
                       <span id="event_descriptionh14" class="event_description"> <br></span>
                       <span id="event_descriptionh15" class="event_description"> <br></span>
                       <span id="event_descriptionh16" class="event_description"> <br></span>
-                      <span id="event_descriptionh17" class="event_description"> <br></span>
+                      <span id="event_descriptionh17" class="event_description">Dickens report<br></span>
                       <span id="event_descriptionh18" class="event_description"> <br></span>
                       <span id="event_descriptionh19" class="event_description"> <br></span>
                       <span id="event_descriptionh20" class="event_description"><br></span>
@@ -156,7 +152,7 @@
             </div>
             <div class="right_cards_title_section">
               <h3>Team Roster</h3>
-              <svg><image id="chevron_teamroster" href="./icons/chevron-up.svg" onClick="collapseTeamRoster()"/></svg>
+              <svg><image id="chevron_teamroster" class="chevron" href="./icons/chevron-up.svg" onClick="collapseTeamRoster()"/></svg>
               <a>Filter</a>
               <a>Sort</a>
             </div>
@@ -510,7 +506,7 @@
           <div id="left_bottom_container">
           <div class="left_bottom_container_title">
                 <h3>Claims</h3>
-                <svg><image id="chevron_taskpool" href="./icons/chevron-up.svg" onClick="collapseTaskpool()"/></svg>
+                <svg><image id="chevron_taskpool" class="chevron" href="./icons/chevron-up.svg" onClick="collapseTaskpool()"/></svg>
                 <a>Filter</a>
                 <a>Sort</a>
                 <input type="search" class="searchbox">
@@ -534,63 +530,63 @@
                             </thead>
                             <tbody>
                               <tr>
-                                <td class="tg-0pky">#6877</td>
+                                <td class="tg-0pky">#6895</td>
                                 <td class="tg-0pky">Conservation</td>
                                 <td class="tg-0pky">Chi Len</td>
                                 <td class="tg-0pky">Survivorship plus</td>
                                 <td class="tg-0pky"><a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a></td>
                               </tr>
                               <tr>
-                                <td class="tg-0pky">#6877</td>
+                                <td class="tg-0pky">#6829</td>
                                 <td class="tg-0lax">Marketing</td>
                                 <td class="tg-0lax">Lucienne</td>
                                 <td class="tg-0lax">Accumulation</td>
                                 <td class="tg-0pky"><a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a></td>
                               </tr>
                               <tr>
-                                <td class="tg-0pky">#6877</td>
+                                <td class="tg-0pky">#3377</td>
                                 <td class="tg-0lax">Death Claim</td>
                                 <td class="tg-0pky">Elsie</td>
                                 <td class="tg-0lax">Guaranteed term</td>
                                 <td class="tg-0pky"><a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a></td>
                               </tr>
                               <tr>
-                                <td class="tg-0pky">#6877</td>
+                                <td class="tg-0pky">#6987</td>
                                 <td class="tg-0lax">Marketing</td>
                                 <td class="tg-0pky">Rosalind</td>
                                 <td class="tg-0lax">Survivorship plus</td>
                                 <td class="tg-0pky"><a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a></td>
                               </tr>
                               <tr>
-                                <td class="tg-0pky">#6877</td>
+                                <td class="tg-0pky">#2177</td>
                                 <td class="tg-0lax">Conservation</td>
                                 <td class="tg-0pky">Chi Len</td>
                                 <td class="tg-0lax">Guaranteed term</td>
                                 <td class="tg-0pky"><a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a></td>
                               </tr>
                               <tr>
-                                <td class="tg-0pky">#6877</td>
+                                <td class="tg-0pky">#6521</td>
                                 <td class="tg-0lax">Marketing</td>
                                 <td class="tg-0pky">Ella</td>
                                 <td class="tg-0lax">Whole life</td>
                                 <td class="tg-0pky"><a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a></td>
                               </tr>
                               <tr>
-                                <td class="tg-0pky">#6877</td>
+                                <td class="tg-0pky">#1254</td>
                                 <td class="tg-0lax">Death claim</td>
                                 <td class="tg-0pky">Ella</td>
                                 <td class="tg-0lax">Survivorship Plus</td>
                                 <td class="tg-0pky"><a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a></td>
                               </tr>
                               <tr>
-                                <td class="tg-0pky">#6877</td>
+                                <td class="tg-0pky">#6598</td>
                                 <td class="tg-0lax">Marketing</td>
                                 <td class="tg-0pky">Rosalind</td>
                                 <td class="tg-0lax">Accumulation</td>
                                 <td class="tg-0pky"><a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a></td>
                               </tr>
                               <tr>
-                                <td class="tg-0pky">#6877</td>
+                                <td class="tg-0pky">#5348</td>
                                 <td class="tg-0lax">Death claim</td>
                                 <td class="tg-0pky">Glen</td>
                                 <td class="tg-0lax">Whole life</td>
@@ -615,126 +611,126 @@
                             </thead>
                             <tbody>
                               <tr>
-                                <td class="tg-0pky">#6877</td>
+                                <td class="tg-0pky">#1258</td>
                                 <td class="tg-0pky">Conservation</td>
                                 <td class="tg-0pky">Scott Stuart</td>
                                 <td class="tg-0pky">Survivorship plus</td>
                                 <td class="tg-0pky"><a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a></td>
                               </tr>
                               <tr>
-                                <td class="tg-0pky">#6877</td>
+                                <td class="tg-0pky">#6598</td>
                                 <td class="tg-0lax">Marketing</td>
                                 <td class="tg-0lax">Ashley Whitaker</td>
                                 <td class="tg-0lax">Accumulation</td>
                                 <td class="tg-0pky"><a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a></td>
                               </tr>
                               <tr>
-                                <td class="tg-0pky">#6877</td>
+                                <td class="tg-0pky">#1257</td>
                                 <td class="tg-0lax">Death Claim</td>
                                 <td class="tg-0lax">Oscar Stanley</td>
                                 <td class="tg-0lax">Guaranteed term</td>
                                 <td class="tg-0pky"><a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a></td>
                               </tr>
                               <tr>
-                                <td class="tg-0pky">#6877</td>
+                                <td class="tg-0pky">#5632</td>
                                 <td class="tg-0lax">Marketing</td>
                                 <td class="tg-0lax">Andy Murray</td>
                                 <td class="tg-0lax">Survivorship plus</td>
                                 <td class="tg-0pky"><a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a></td>
                               </tr>
                               <tr>
-                                <td class="tg-0pky">#6877</td>
+                                <td class="tg-0pky">#5236</td>
                                 <td class="tg-0lax">Conservation</td>
                                 <td class="tg-0lax">George Ham</td>
                                 <td class="tg-0lax">Guaranteed term</td>
                                 <td class="tg-0pky"><a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a></td>
                               </tr>
                               <tr>
-                                <td class="tg-0pky">#6877</td>
+                                <td class="tg-0pky">#8765</td>
                                 <td class="tg-0lax">Marketing</td>
                                 <td class="tg-0lax">Eric Homestead</td>
                                 <td class="tg-0lax">Whole life</td>
                                 <td class="tg-0pky"><a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a></td>
                               </tr>
                               <tr>
-                                <td class="tg-0pky">#6877</td>
+                                <td class="tg-0pky">#8654</td>
                                 <td class="tg-0lax">Death claim</td>
                                 <td class="tg-0lax">Alfred Davis</td>
                                 <td class="tg-0lax">Survivorship Plus</td>
                                 <td class="tg-0pky"><a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a></td>
                               </tr>
                               <tr>
-                                <td class="tg-0pky">#6877</td>
+                                <td class="tg-0pky">#2154</td>
                                 <td class="tg-0lax">Marketing</td>
                                 <td class="tg-0lax">Anna White</td>
                                 <td class="tg-0lax">Accumulation</td>
                                 <td class="tg-0pky"><a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a></td>
                               </tr>
                               <tr>
-                                <td class="tg-0pky">#6877</td>
+                                <td class="tg-0pky">#6325</td>
                                 <td class="tg-0lax">Death claim</td>
                                 <td class="tg-0lax">Katie Stein</td>
                                 <td class="tg-0lax">Whole life</td>
                                 <td class="tg-0pky"><a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a></td>
                               </tr>
                               <tr>
-                                <td class="tg-0pky">#6877</td>
+                                <td class="tg-0pky">#2158</td>
                                 <td class="tg-0pky">Conservation</td>
                                 <td class="tg-0pky">Scott Stuart</td>
                                 <td class="tg-0pky">Survivorship plus</td>
                                 <td class="tg-0pky"><a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a></td>
                               </tr>
                               <tr>
-                                <td class="tg-0pky">#6877</td>
+                                <td class="tg-0pky">#2351</td>
                                 <td class="tg-0lax">Marketing</td>
                                 <td class="tg-0lax">Ashley Whitaker</td>
                                 <td class="tg-0lax">Accumulation</td>
                                 <td class="tg-0pky"><a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a></td>
                               </tr>
                               <tr>
-                                <td class="tg-0pky">#6877</td>
+                                <td class="tg-0pky">#6821</td>
                                 <td class="tg-0lax">Death Claim</td>
                                 <td class="tg-0lax">Oscar Stanley</td>
                                 <td class="tg-0lax">Guaranteed term</td>
                                 <td class="tg-0pky"><a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a></td>
                               </tr>
                               <tr>
-                                <td class="tg-0pky">#6877</td>
+                                <td class="tg-0pky">#3265</td>
                                 <td class="tg-0lax">Marketing</td>
                                 <td class="tg-0lax">Andy Murray</td>
                                 <td class="tg-0lax">Survivorship plus</td>
                                 <td class="tg-0pky"><a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a></td>
                               </tr>
                               <tr>
-                                <td class="tg-0pky">#6877</td>
+                                <td class="tg-0pky">#6598</td>
                                 <td class="tg-0lax">Conservation</td>
                                 <td class="tg-0lax">George Ham</td>
                                 <td class="tg-0lax">Guaranteed term</td>
                                 <td class="tg-0pky"><a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a></td>
                               </tr>
                               <tr>
-                                <td class="tg-0pky">#6877</td>
+                                <td class="tg-0pky">#1245</td>
                                 <td class="tg-0lax">Marketing</td>
                                 <td class="tg-0lax">Eric Homestead</td>
                                 <td class="tg-0lax">Whole life</td>
                                 <td class="tg-0pky"><a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a></td>
                               </tr>
                               <tr>
-                                <td class="tg-0pky">#6877</td>
+                                <td class="tg-0pky">#5314</td>
                                 <td class="tg-0lax">Death claim</td>
                                 <td class="tg-0lax">Alfred Davis</td>
                                 <td class="tg-0lax">Survivorship Plus</td>
                                 <td class="tg-0pky"><a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a></td>
                               </tr>
                               <tr>
-                                <td class="tg-0pky">#6877</td>
+                                <td class="tg-0pky">#5694</td>
                                 <td class="tg-0lax">Marketing</td>
                                 <td class="tg-0lax">Anna White</td>
                                 <td class="tg-0lax">Accumulation</td>
                                 <td class="tg-0pky"><a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a></td>
                               </tr>
                               <tr>
-                                <td class="tg-0pky">#6877</td>
+                                <td class="tg-0pky">#1295</td>
                                 <td class="tg-0lax">Death claim</td>
                                 <td class="tg-0lax">Katie Stein</td>
                                 <td class="tg-0lax">Whole life</td>
@@ -743,6 +739,66 @@
                             </tbody>
                             </table>
                     </div>
+                </div>
+                <div id="left_section3">
+                  <h3>Resolved (29)</h3>
+                  <div class= "left_main_content_item">
+                      <table class="tg">
+                          <thead>
+                            <tr>
+                              <th class="tg-fymr">Policy#</th>
+                              <th class="tg-fymr">Type</th>
+                              <th class="tg-fymr">Rep.</th>
+                              <th class="tg-fymr">Product</th>
+                              <th class="tg-fymr"></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="tg-0pky">#1524</td>
+                              <td class="tg-0pky">Conservation</td>
+                              <td class="tg-0pky">Chi Len</td>
+                              <td class="tg-0pky">Survivorship plus</td>
+                              <td class="tg-0pky"><a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a></td>
+                            </tr>
+                            <tr>
+                              <td class="tg-0pky">#9568</td>
+                              <td class="tg-0lax">Marketing</td>
+                              <td class="tg-0lax">Lucienne</td>
+                              <td class="tg-0lax">Accumulation</td>
+                              <td class="tg-0pky"><a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a></td>
+                            </tr>
+                            <tr>
+                              <td class="tg-0pky">#8795</td>
+                              <td class="tg-0lax">Death Claim</td>
+                              <td class="tg-0pky">Elsie</td>
+                              <td class="tg-0lax">Guaranteed term</td>
+                              <td class="tg-0pky"><a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a></td>
+                            </tr>
+                            <tr>
+                              <td class="tg-0pky">#3625</td>
+                              <td class="tg-0lax">Marketing</td>
+                              <td class="tg-0pky">Rosalind</td>
+                              <td class="tg-0lax">Survivorship plus</td>
+                              <td class="tg-0pky"><a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a></td>
+                            </tr>
+                            <tr>
+                              <td class="tg-0pky">#1257</td>
+                              <td class="tg-0lax">Conservation</td>
+                              <td class="tg-0pky">Chi Len</td>
+                              <td class="tg-0lax">Guaranteed term</td>
+                              <td class="tg-0pky"><a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a></td>
+                            </tr>
+                            <tr>
+                              <td class="tg-0pky">#6958</td>
+                              <td class="tg-0lax">Marketing</td>
+                              <td class="tg-0pky">Ella</td>
+                              <td class="tg-0lax">Whole life</td>
+                              <td class="tg-0pky"><a href="#" title="More"><svg><image href="./icons/dots-horizontal.svg" onClick="fav()"/></svg></a></td>
+                            </tr>
+                          </tbody>
+                          </table>
+                  </div>
                 </div>
           </div>
           </div>

@@ -1,17 +1,14 @@
 const sidebar = document.querySelector("#sidebar");
 const navToggle = document.querySelector('.nav-toggle');
-const menu = document.querySelector("#close");
 let bars = document.querySelectorAll('.bar');
 let resizeTimer;
 let sidebarToggle;
-let collapseTaskpoolToggle;
-let collapseTeamRosterToggle;
+let collapseTaskpoolToggle = false;
+let collapseTeamRosterToggle = false;
 let date = new Date()
-let hour = date.getHours()
+
 
 window.addEventListener("resize", () => {windowResizeSetSidebar()});
-
-menu.addEventListener("click", () =>{clickSetSidebar()});
   
 function clickSetSidebar(){
    if(sidebar.style.width == "165px"){
@@ -64,6 +61,7 @@ function windowResizeSetSidebar(){
 
 function hiThere(){
    const hiThereMessage = document.querySelector("#hiThere")
+   let hour = date.getHours()
    if(hour>=5 && hour<=12){
       hiThereMessage.textContent = "Good Morning,"
    } else if(hour>12 && hour<18){
@@ -73,14 +71,9 @@ function hiThere(){
    }
 }
 
-const scheduleContainer = document.getElementById("top_right_container")
+//randomize postit tilts
+document.querySelectorAll(".postit").forEach(postit => postit.style.transform = "rotate(" + (Math.random() * (-6 - 6) + 6).toFixed(2) + "deg)");
 
-scheduleContainer.addEventListener("mouseleave", function () {
-   var node = this;
-   setTimeout(function() {
-      schedule()
-   }, 5000)
-});
 
 function getRealTime(){
    let currentDateTime = new Date();
@@ -93,87 +86,39 @@ function getRealTime(){
 
 getRealTime();
 
-function schedule(){
-let scheduleHourID;
-   if(hour == 0){
-      scheduleHourID = "h00"
-      .classList.add('line')
-   } else if(hour == 1){
-      scheduleHourID = "h01"
-      document.getElementById("event_descriptionh01").classList.add('line')
-   } else if(hour == 2){
-      scheduleHourID = "h02"
-      document.getElementById("event_descriptionh02").classList.add('line')
-   } else if(hour == 3){
-      scheduleHourID = "h03"
-      document.getElementById("event_descriptionh03").classList.add('line')
-   } else if(hour == 4){
-      scheduleHourID = "h04"
-      document.getElementById("event_descriptionh04").classList.add('line')
-   } else if(hour == 5){
-      scheduleHourID = "h05"
-      document.getElementById("event_descriptionh05").classList.add('line')
-   } else if(hour == 6){
-      scheduleHourID = "h06"
-      document.getElementById("event_descriptionh06").classList.add('line')
-   } else if(hour == 7){
-      scheduleHourID = "h07"
-      document.getElementById("event_descriptionh07").classList.add('line')
-   } else if(hour == 8){
-      scheduleHourID = "h08"
-      document.getElementById("event_descriptionh08").classList.add('line')
-   } else if(hour == 9){
-      scheduleHourID = "h09"
-      document.getElementById("event_descriptionh09").classList.add('line')
-   } else if(hour == 10){
-      scheduleHourID = "h10"
-      document.getElementById("event_descriptionh10").classList.add('line')
-   } else if(hour == 11){
-      scheduleHourID = "h11"
-      document.getElementById("event_descriptionh11").classList.add('line')
-   } else if(hour == 12){
-      scheduleHourID = "h12"
-      document.getElementById("event_descriptionh12").classList.add('line')
-   } else if(hour == 13){
-      scheduleHourID = "h13"
-      document.getElementById("event_descriptionh13").classList.add('line')
-   } else if(hour == 14){
-      scheduleHourID = "h14"
-      document.getElementById("event_descriptionh14").classList.add('line')
-   } else if(hour == 15){
-      scheduleHourID = "h15"
-      document.getElementById("event_descriptionh15").classList.add('line')
-   } else if(hour == 16){
-      scheduleHourID = "h16"
-      document.getElementById("event_descriptionh16").classList.add('line')
-   } else if(hour == 17){
-      scheduleHourID = "h17"
-      document.getElementById("event_descriptionh17").classList.add('line')
-   } else if(hour == 18){
-      scheduleHourID = "h18"
-      document.getElementById("event_descriptionh18").classList.add('line')
-   } else if(hour == 19){
-      scheduleHourID = "h19"
-      document.getElementById("event_descriptionh19").classList.add('line')
-   } else if(hour == 20){
-      scheduleHourID = "h20"
-      document.getElementById("event_descriptionh20").classList.add('line')
-   } else if(hour == 21){
-      scheduleHourID = "h21"
-      document.getElementById("event_descriptionh21").classList.add('line')
-   } else if(hour == 22){
-      scheduleHourID = "h22"
-      document.getElementById("event_descriptionh22").classList.add('line')
-   } else if(hour == 23){
-      scheduleHourID = "h23"
-      document.getElementById("event_descriptionh23").classList.add('line')
-   }
+const scheduleContainer = document.getElementById("schedule_paper");
+scheduleContainer.addEventListener("mouseleave", schedule);
+let scheduleTimer1;
 
-   document.getElementById(scheduleHourID).scrollIntoView({
+function schedule(){
+//get window position parameters at before scrolltoview moves page position.
+let windowPositionLeft = document.documentElement.scrollLeft
+let windowPositionTop =document.documentElement.scrollTop
+
+//get timing parameters
+let time = new Date()
+let scheduleHourID = "h" + (time.getHours())
+let millisecondsUntilNextHour =     ((60 - (time.getMinutes())) * 60000) +
+                                    ((60 - (time.getSeconds())) * 1000) +
+                                    (1000 - (time.getMilliseconds()));
+
+//Reset timer and remove old line
+clearTimeout(scheduleTimer1);
+document.querySelectorAll(".line").forEach(ele => ele.classList.remove('line'));
+
+//Put line and put in middle (changes scroll position of winidow)
+document.getElementById("event_description" + scheduleHourID).classList.add('line')
+document.getElementById("event_description" + scheduleHourID).scrollIntoView({
       behavior: 'auto',
       block: 'center',
       inline: 'center'
   });
+
+//Go back to window scroll position
+window.scroll(windowPositionLeft, windowPositionTop)
+
+//Repeat on the hour
+scheduleTimer1 = setTimeout(schedule, millisecondsUntilNextHour);
 }
 
 schedule()
