@@ -359,3 +359,4 @@ google.charts.load('current', {'packages':['corechart']});
 
 hiThere()
 onloadSetSidebar();
+window.scroll(0, 0)
